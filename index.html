@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudra - AI Voice Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rudra</h1>
+            <p class="subtitle">AI Voice Assistant</p>
+        </header>
+
+        <main>
+            <!-- Status Section -->
+            <div class="status-section">
+                <div class="status-indicator" id="status-indicator">
+                    <div class="status-dot" id="status-dot"></div>
+                    <span class="status-text" id="status-text">Idle</span>
+                </div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="controls">
+                <button class="mic-button" id="mic-button" title="Toggle Voice Recognition">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                    <span id="mic-text">Start Listening</span>
+                </button>
+
+
+
+                <button class="tv-button" id="tv-button" title="Connect to TV">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <span id="tv-text">Connect TV</span>
+                </button>
+            </div>
+
+            <!-- Display Section -->
+            <div class="display-section">
+                <div class="input-display">
+                    <h3>Voice Input</h3>
+                    <div class="display-content" id="voice-input">
+                        Say "Rudra" followed by your command...
+                    </div>
+                </div>
+
+                <div class="output-display">
+                    <h3>Rudra's Response</h3>
+                    <div class="display-content" id="assistant-response">
+                        Waiting for your command...
+                    </div>
+                </div>
+            </div>
+
+            <!-- TV Status -->
+            <div class="tv-status" id="tv-status" style="display: none;">
+                <div class="tv-indicator">
+                    <div class="tv-dot"></div>
+                    <span id="tv-status-text">TV Connected</span>
+                </div>
+            </div>
+
+
+
+            <!-- Help Section -->
+            <div class="help-section">
+                <h3>Alexa-Style Commands</h3>
+                <div class="command-categories">
+                    <div class="command-category">
+                        <h4>⏰ Time & Date</h4>
+                        <ul>
+                            <li>"Rudra, what time is it?"</li>
+                            <li>"Rudra, what's today's date?"</li>
+                        </ul>
+                    </div>
+                    <div class="command-category">
+                        <h4>🌤️ Weather</h4>
+                        <ul>
+                            <li>"Rudra, what's the weather?"</li>
+                            <li>"Rudra, what's the temperature?"</li>
+                        </ul>
+                    </div>
+                    <div class="command-category">
+                        <h4>🎵 Music Control</h4>
+                        <ul>
+                            <li>"Rudra, play music"</li>
+                            <li>"Rudra, volume up"</li>
+                            <li>"Rudra, pause music"</li>
+                        </ul>
+                    </div>
+                    <div class="command-category">
+                        <h4>🏠 Smart Home</h4>
+                        <ul>
+                            <li>"Rudra, turn on the lights"</li>
+                            <li>"Rudra, lock the door"</li>
+                            <li>"Rudra, check security"</li>
+                        </ul>
+                    </div>
+                    <div class="command-category">
+                        <h4>📺 Entertainment</h4>
+                        <ul>
+                            <li>"Rudra, open Netflix"</li>
+                            <li>"Rudra, open Spotify"</li>
+                            <li>"Rudra, play Naatu Naatu on YouTube"</li>
+                            <li>"Rudra, connect TV"</li>
+                        </ul>
+                    </div>
+                    <div class="command-category">
+                        <h4>🧮 Calculator & News</h4>
+                        <ul>
+                            <li>"Rudra, calculate 15 plus 25"</li>
+                            <li>"Rudra, what's the news?"</li>
+                            <li>"Rudra, what is artificial intelligence?"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+        <footer>
+            <p>Powered by Web Speech API & Wikipedia</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
