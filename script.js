@@ -3,7 +3,7 @@
  * A client-side voice assistant with YouTube, Wikipedia, and TV connectivity
  */
 
-class RudraAssistant {
+class NexaAssistant {
     constructor() {
         this.isListening = false;
         this.isTVConnected = false;
@@ -41,7 +41,7 @@ class RudraAssistant {
         this.setupVoices();
         this.updateStatus('idle');
         
-        console.log('Rudra Assistant initialized successfully');
+        console.log('NExa Assistant initialized successfully');
     }
 
     setupSpeechRecognition() {
@@ -164,7 +164,7 @@ class RudraAssistant {
             this.recognition.start();
             this.micButton.classList.add('active');
             this.micText.textContent = 'Stop Listening';
-            this.voiceInput.textContent = 'Listening for "Rudra" commands...';
+            this.voiceInput.textContent = 'Listening for "NExa" commands...';
             this.updateStatus('listening');
         } catch (error) {
             console.error('Failed to start listening:', error);
@@ -178,7 +178,7 @@ class RudraAssistant {
         this.recognition.stop();
         this.micButton.classList.remove('active');
         this.micText.textContent = 'Start Listening';
-        this.voiceInput.textContent = 'Say "Rudra" followed by your command...';
+        this.voiceInput.textContent = 'Say "NExa" followed by your command...';
         this.voiceInput.classList.remove('active');
         this.updateStatus('idle');
     }
@@ -587,8 +587,8 @@ class RudraAssistant {
         const command = transcript.toLowerCase();
         
         // Check if command starts with "Rudra"
-        if (!command.startsWith('rudra')) {
-            console.log('Command ignored - does not start with "Rudra":', transcript);
+        if (!command.startsWith('nexa')) {
+            console.log('Command ignored - does not start with "NExa":', transcript);
             return;
         }
 
@@ -1171,13 +1171,13 @@ class RudraAssistant {
 
 // Initialize the assistant when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    window.rudra = new RudraAssistant();
+    window.nexa = new NexaAssistant();
 });
 
 // Handle page unload
 window.addEventListener('beforeunload', () => {
-    if (window.rudra && window.rudra.isListening) {
-        window.rudra.stopListening();
+    if (window.nexa && window.nexa.isListening) {
+        window.nexa.stopListening();
     }
 });
 
